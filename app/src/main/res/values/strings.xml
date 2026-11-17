@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Unicid Conecta</string>
+
+    <!-- Status -->
+    <string name="status_recebido">Recebido</string>
+    <string name="status_em_analise">Em análise</string>
+    <string name="status_em_atendimento">Em atendimento</string>
+    <string name="status_resolvido">Resolvido</string>
+
+    <!-- Prioridade -->
+    <string name="prioridade_baixa">Baixa</string>
+    <string name="prioridade_media">Média</string>
+    <string name="prioridade_alta">Alta</string>
+    <string name="prioridade_urgente">Urgente</string>
+
+    <!-- Categoria -->
+    <string name="categoria_tecnologia">Tecnologia</string>
+    <string name="categoria_audiovisual">Audiovisual</string>
+    <string name="categoria_infraestrutura">Infraestrutura</string>
+
+    <!-- Chamados -->
+    <string name="chamado_nao_atribuido">Não atribuído</string>
+    <string name="chamado_prioridade_fmt">PRIORIDADE %1$s</string>
+    <string name="chamado_atendimento_fmt">Atendimento %1$s</string>
+    <string name="chamado_status_atualizado_fmt">Status atualizado para: %1$s</string>
+    <string name="chamado_descricao_obrigatoria">Descreva o problema para enviar o chamado.</string>
+</resources>

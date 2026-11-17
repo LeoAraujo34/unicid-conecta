@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_inicio"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Início" />
+
+    <item
+        android:id="@+id/nav_chamados"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Chamados" />
+
+    <item
+        android:id="@+id/nav_carteirinha"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Carteirinha" />
+
+    <item
+        android:id="@+id/nav_avisos"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Avisos" />
+
+    <item
+        android:id="@+id/nav_perfil"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Perfil" />
+</menu>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_app">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_title_acomp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Acompanhamento"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_protocolo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/blue_primary"
+            app:cardElevation="2dp"
+            app:strokeWidth="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_acomp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_lbl_protocolo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PROTOCOLO"
+                    android:textColor="#B0D0FF"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_badge_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/badge_orange_bg"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="Em manutenção"
+                    android:textColor="@color/badge_orange_text"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_num_protocolo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="#2026-01584"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_lbl_protocolo" />
+
+                <View
+                    android:id="@+id/divider_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#33FFFFFF"
+                    app:layout_constraintTop_toBottomOf="@id/tv_num_protocolo" />
+
+                <TextView
+                    android:id="@+id/tv_titulo_chamado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Computador sem internet"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider_card" />
+
+                <TextView
+                    android:id="@+id/tv_local_chamado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Laboratório 204 • Bloco Alfa"
+                    android:textColor="#E0E7FF"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_titulo_chamado" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_lbl_andamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Andamento"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_protocolo" />
+
+        <ImageView
+            android:id="@+id/iv_icon_1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@android:drawable/checkbox_on_background"
+            app:tint="@color/badge_green_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_lbl_andamento" />
+
+        <TextView
+            android:id="@+id/tv_step1_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Chamado recebido"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_1"
+            app:layout_constraintTop_toTopOf="@id/iv_icon_1" />
+
+        <TextView
+            android:id="@+id/tv_step1_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14:12"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/tv_step1_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_step1_title" />
+
+        <ImageView
+            android:id="@+id/iv_icon_2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="20dp"
+            android:src="@android:drawable/checkbox_on_background"
+            app:tint="@color/badge_green_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_step1_time" />
+
+        <TextView
+            android:id="@+id/tv_step2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Encaminhado para manutenção"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_2"
+            app:layout_constraintTop_toTopOf="@id/iv_icon_2" />
+
+        <TextView
+            android:id="@+id/tv_step2_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14:40"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/tv_step2_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_step2_title" />
+
+        <ImageView
+            android:id="@+id/iv_icon_3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="20dp"
+            android:src="@android:drawable/checkbox_on_background"
+            app:tint="@color/badge_green_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_step2_time" />
+
+        <TextView
+            android:id="@+id/tv_step3_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Técnico responsável atribuído"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_3"
+            app:layout_constraintTop_toTopOf="@id/iv_icon_3" />
+
+        <TextView
+            android:id="@+id/tv_step3_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14:55"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/tv_step3_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_step3_title" />
+
+        <ImageView
+            android:id="@+id/iv_icon_4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="20dp"
+            android:src="@android:drawable/ic_menu_recent_history"
+            app:tint="@color/badge_orange_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_step3_time" />
+
+        <TextView
+            android:id="@+id/tv_step4_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Manutenção em andamento"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_4"
+            app:layout_constraintTop_toTopOf="@id/iv_icon_4" />
+
+        <TextView
+            android:id="@+id/tv_step4_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agora"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/tv_step4_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_step4_title" />
+
+        <ImageView
+            android:id="@+id/iv_icon_5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="20dp"
+            android:src="@android:drawable/radiobutton_off_background"
+            app:tint="@color/card_stroke"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_step4_time" />
+
+        <TextView
+            android:id="@+id/tv_step5_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Problema resolvido"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_5"
+            app:layout_constraintTop_toTopOf="@id/iv_icon_5" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_atualizacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/white"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_step5_title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Atualização da equipe"
+                    android:textColor="@color/text_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <!-- ADICIONADO O ID AQUI -->
+                <TextView
+                    android:id="@+id/tv_mensagem_equipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Aguardando atualizações da equipe técnica."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <!-- ADICIONADO O ID AQUI TAMBÉM (OPCIONAL) -->
+                <TextView
+                    android:id="@+id/tv_tempo_equipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Equipe de TI"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

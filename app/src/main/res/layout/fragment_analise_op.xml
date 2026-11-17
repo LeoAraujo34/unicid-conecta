@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_app">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <View
+            android:id="@+id/header_bg_analise"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:background="@color/blue_primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_sub_analise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="UNICID - OPERAÇÕES"
+            android:textColor="#B0D0FF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_analise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Análise operacional"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_sub_analise"
+            app:layout_constraintTop_toBottomOf="@id/tv_sub_analise" />
+
+        <TextView
+            android:id="@+id/tv_desempenho_semanal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Desempenho semanal"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_bg_analise" />
+
+        <TextView
+            android:id="@+id/tv_campus_tatuape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Campus Tatuapé"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_desempenho_semanal"
+            app:layout_constraintTop_toBottomOf="@id/tv_desempenho_semanal" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_taxa_resolucao"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="@color/white"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/card_tempo_medio"
+            app:layout_constraintTop_toBottomOf="@id/tv_campus_tatuape">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_taxa_resolucao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="87%"
+                    android:textColor="@color/text_primary"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Taxa de resolução" android:textColor="@color/text_secondary" android:textSize="11sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_tempo_medio"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="@color/white"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp"
+            app:layout_constraintStart_toEndOf="@id/card_taxa_resolucao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/card_taxa_resolucao">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_tempo_medio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="42 min"
+                    android:textColor="@color/text_primary"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tempo médio inicial" android:textColor="@color/text_secondary" android:textSize="11sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_categorias"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="@color/white"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_taxa_resolucao">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Categorias mais frequentes" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" />
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tecnologia" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="38%" android:textColor="@color/text_primary" android:textSize="12sp" android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_tecnologia"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="20dp"
+                        android:progress="38"
+                        android:progressTint="@color/blue_primary"
+                        android:progressBackgroundTint="@color/blue_light_bg" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
